@@ -18,7 +18,7 @@ const branches = [
 const quickLinks = [
   { label: "Beranda", href: "#beranda" },
   { label: "Lokasi", href: "#lokasi" },
-  { label: "Fasilitas", href: "#fasilitas" },
+
   { label: "Gallery", href: "#gallery" },
   { label: "Harga", href: "#harga" },
 ];
