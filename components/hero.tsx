@@ -43,7 +43,7 @@ export default function Hero() {
           className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-white/80 md:text-xl"
         >
           Hunian nyaman, aman, dan islami untuk muslimah. Tersedia di 3 kota
-          strategis dengan fasilitas terbaik.
+          strategis.
         </motion.p>
 
         <motion.div
