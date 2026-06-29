@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import WaButton from "@/components/wa-button";
+import JsonLd from "@/components/json-ld";
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Kost Muslimah Baitul Utrujjah",
   },
   description:
-    "Kost Muslimah Baitul Utrujjah — hunian kos aman, nyaman, dan islami untuk muslimah. Tersedia 3 cabang: Bekasi, Jogja, Semarang. Kamar AC & Non-AC. Harga terjangkau.",
+    "Kost Muslimah Baitul Utrujjah — hunian kos aman, nyaman, dan islami untuk muslimah. Tersedia 3 cabang: Bekasi, Jogja, Semarang. Harga mulai Rp 500.000 include listrik.",
   keywords: [
     "kost muslimah",
     "kost putri",
@@ -81,13 +82,14 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content="#8FA87A" />
-        <meta name="google-site-verification" content="xxx" />
+        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
       </head>
       <body className="flex min-h-full flex-col bg-warm-white">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
         <WaButton />
+        <JsonLd />
       </body>
     </html>
   );
