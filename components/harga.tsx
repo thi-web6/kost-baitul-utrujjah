@@ -5,10 +5,8 @@ import { Phone, Check } from "lucide-react";
 
 const features = [
   "Listrik sudah termasuk",
-  "Kamar mandi dalam",
   "WiFi gratis",
   "Lemari pakaian",
-  "Spring bed nyaman",
   "Keamanan 24 jam",
 ];
 
