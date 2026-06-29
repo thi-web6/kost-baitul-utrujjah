@@ -7,7 +7,6 @@ const features = [
   "Listrik sudah termasuk",
   "WiFi gratis",
   "Lemari pakaian",
-  "Keamanan 24 jam",
 ];
 
 export default function Harga() {
