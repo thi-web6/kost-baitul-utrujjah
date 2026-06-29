@@ -1,61 +1,16 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Check, Phone } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Phone, Check } from "lucide-react";
 
-const plans = [
-  {
-    name: "Kamar Non-AC",
-    price: "Rp 500.000",
-    period: "/bulan",
-    features: [
-      "Kipas angin plafon",
-      "Kamar mandi dalam",
-      "WiFi gratis",
-      "Listrik sudah termasuk",
-      "Lemari pakaian",
-      "Spring bed nyaman",
-    ],
-  },
-  {
-    name: "Kamar AC",
-    price: "Rp 700.000",
-    period: "/bulan",
-    popular: true,
-    features: [
-      "AC dingin",
-      "Kamar mandi dalam",
-      "WiFi gratis",
-      "Listrik sudah termasuk",
-      "Lemari pakaian",
-      "Spring bed nyaman",
-      "TV Digital",
-    ],
-  },
+const features = [
+  "Listrik sudah termasuk",
+  "Kamar mandi dalam",
+  "WiFi gratis",
+  "Lemari pakaian",
+  "Spring bed nyaman",
+  "Keamanan 24 jam",
 ];
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.15 },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" as const },
-  },
-};
 
 export default function Harga() {
   return (
@@ -75,92 +30,51 @@ export default function Harga() {
             Harga
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-            Harga sudah termasuk biaya listrik. Hunian nyaman tanpa biaya
-            tambahan yang membingungkan.
+            Harga sudah termasuk biaya listrik. Tanpa biaya tambahan yang
+            membingungkan.
           </p>
         </motion.div>
 
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2"
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
+          className="mx-auto max-w-md"
         >
-          {plans.map((plan) => (
-            <motion.div key={plan.name} variants={itemVariants}>
-              <Card
-                className={`relative h-full border-2 transition-shadow duration-300 hover:shadow-xl ${
-                  plan.popular
-                    ? "border-sage bg-warm-white shadow-lg"
-                    : "border-transparent bg-cream/40"
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="inline-block rounded-full bg-sage px-4 py-1 text-xs font-medium text-white shadow-md">
-                      Paling Laris
-                    </span>
+          <div className="rounded-2xl border-2 border-sage bg-warm-white p-8 text-center shadow-lg">
+            <p className="mb-2 text-sm font-medium text-muted-foreground">
+              Mulai dari
+            </p>
+            <p className="font-heading text-5xl font-bold tracking-tight text-sage-dark">
+              Rp 500.000
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">/bulan</p>
+            <p className="mt-2 text-xs text-sage">Sudah termasuk listrik</p>
+
+            <div className="my-8 border-t border-sage/10" />
+
+            <ul className="space-y-3 text-left">
+              {features.map((feature) => (
+                <li key={feature} className="flex items-center gap-3 text-sm">
+                  <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-sage/10 text-sage-dark">
+                    <Check className="h-3 w-3" />
                   </div>
-                )}
+                  <span className="text-muted-foreground">{feature}</span>
+                </li>
+              ))}
+            </ul>
 
-                <CardHeader className="pb-4 pt-6 text-center">
-                  <CardTitle className="font-heading text-xl">
-                    {plan.name}
-                  </CardTitle>
-                  <CardDescription className="mt-1">
-                    Include listrik
-                  </CardDescription>
-                  <div className="mt-4">
-                    <span className="font-heading text-4xl font-bold text-sage-dark">
-                      {plan.price}
-                    </span>
-                    <span className="ml-1 text-sm text-muted-foreground">
-                      {plan.period}
-                    </span>
-                  </div>
-                </CardHeader>
-
-                <CardContent className="space-y-6">
-                  <ul className="space-y-3">
-                    {plan.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex items-center gap-3 text-sm"
-                      >
-                        <div
-                          className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
-                            plan.popular
-                              ? "bg-sage/15 text-sage-dark"
-                              : "bg-sage/10 text-sage-dark"
-                          }`}
-                        >
-                          <Check className="h-3 w-3" />
-                        </div>
-                        <span className="text-muted-foreground">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <a
-                    href={`https://wa.me/6281234567890?text=Halo%20Kak%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(plan.name)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-all ${
-                      plan.popular
-                        ? "bg-sage text-white shadow-md hover:bg-sage-dark"
-                        : "border border-sage/30 bg-transparent text-sage-dark hover:bg-sage/10"
-                    }`}
-                  >
-                    <Phone className="h-4 w-4" />
-                    Pesan Sekarang
-                  </a>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+            <a
+              href="https://wa.me/6281234567890?text=Assalamu%27alaikum%20Kak%2C%20saya%20tertarik%20dengan%20Kost%20Baitul%20Utrujjah"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sage px-6 py-3 text-sm font-medium text-white shadow-md transition-all hover:bg-sage-dark"
+            >
+              <Phone className="h-4 w-4" />
+              Tanya via WhatsApp
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
