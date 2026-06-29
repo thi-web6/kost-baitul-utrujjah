@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Check, Sparkles, Phone } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Check, Phone } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -14,50 +13,30 @@ import {
 const plans = [
   {
     name: "Kamar Non-AC",
-    price: "Rp 450.000",
+    price: "Rp 500.000",
     period: "/bulan",
-    badge: "Ekonomis",
-    popular: false,
     features: [
       "Kipas angin plafon",
       "Kamar mandi dalam",
       "WiFi gratis",
-      "Listrik 1300 VA",
+      "Listrik sudah termasuk",
       "Lemari pakaian",
       "Spring bed nyaman",
     ],
   },
   {
     name: "Kamar AC",
-    price: "Rp 650.000",
+    price: "Rp 700.000",
     period: "/bulan",
-    badge: "Terpopuler",
     popular: true,
     features: [
-      "AC dingin + kipas",
+      "AC dingin",
       "Kamar mandi dalam",
       "WiFi gratis",
-      "Listrik 1300 VA",
+      "Listrik sudah termasuk",
       "Lemari pakaian",
       "Spring bed nyaman",
       "TV Digital",
-    ],
-  },
-  {
-    name: "Kamar AC VIP",
-    price: "Rp 850.000",
-    period: "/bulan",
-    badge: "Premium",
-    popular: false,
-    features: [
-      "AC dingin + kipas",
-      "Kamar mandi dalam",
-      "WiFi prioritas",
-      "Listrik 2200 VA",
-      "Lemari + kulkas",
-      "Spring bed + TV",
-      "Air panas",
-      "Akses parkir luas",
     ],
   },
 ];
@@ -89,16 +68,15 @@ export default function Harga() {
           transition={{ duration: 0.6 }}
           className="mb-14 text-center"
         >
-          <Badge className="mb-4 border-soft-pink/30 bg-soft-pink/20 px-4 py-1.5 text-sm text-rose-700">
-            <Sparkles className="mr-1.5 h-3.5 w-3.5" />
-            Promo Bulan Ini
-          </Badge>
+          <span className="mb-4 inline-block rounded-full bg-sage/10 px-4 py-1.5 text-sm font-medium text-sage-dark">
+            Harga Terjangkau
+          </span>
           <h2 className="font-heading text-3xl font-bold tracking-tight md:text-4xl">
-            Harga & Promo
+            Harga
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-            Harga terjangkau dengan fasilitas terbaik. Diskon khusus untuk
-            mahasiswi dan pembayaran tahunan.
+            Harga sudah termasuk biaya listrik. Hunian nyaman tanpa biaya
+            tambahan yang membingungkan.
           </p>
         </motion.div>
 
@@ -107,7 +85,7 @@ export default function Harga() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid gap-8 md:grid-cols-3"
+          className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2"
         >
           {plans.map((plan) => (
             <motion.div key={plan.name} variants={itemVariants}>
@@ -120,9 +98,9 @@ export default function Harga() {
               >
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-sage px-4 py-1 text-xs text-white shadow-md">
+                    <span className="inline-block rounded-full bg-sage px-4 py-1 text-xs font-medium text-white shadow-md">
                       Paling Laris
-                    </Badge>
+                    </span>
                   </div>
                 )}
 
@@ -131,7 +109,7 @@ export default function Harga() {
                     {plan.name}
                   </CardTitle>
                   <CardDescription className="mt-1">
-                    {plan.badge}
+                    Include listrik
                   </CardDescription>
                   <div className="mt-4">
                     <span className="font-heading text-4xl font-bold text-sage-dark">
@@ -183,24 +161,6 @@ export default function Harga() {
               </Card>
             </motion.div>
           ))}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mx-auto mt-14 max-w-2xl rounded-2xl border border-dashed border-sage/30 bg-cream/50 p-6 text-center md:p-8"
-        >
-          <Sparkles className="mx-auto mb-3 h-6 w-6 text-sage" />
-          <h3 className="font-heading text-lg font-semibold">
-            Promo Spesial Bulan Ini
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Gratis biaya listrik 3 bulan pertama untuk penyewa baru.
-            Diskon 10% untuk pembayaran 6 bulan di muka.
-            Free tour kost sebelum booking!
-          </p>
         </motion.div>
       </div>
     </section>
