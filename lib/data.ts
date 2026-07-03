@@ -44,7 +44,7 @@ export const CITIES: CityData[] = [
       "https://www.google.com/maps/place/LBQ+Ibadurrohman/@-6.1752919,106.99365,17z/data=!3m1!4b1!4m6!3m5!1s0x2e698f348899172f:0xc0eea761c8dce842!8m2!3d-6.1752919!4d106.99365!16s%2Fg%2F11zj4ltvcp!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
     geo: { lat: -6.1752919, lng: 106.99365 },
     description:
-      "Lingkungan asri di Taman Harapan Baru Blok E1, dekat pusat perbelanjaan, kampus, dan akses tol. Kost muslimah nyaman dengan free WiFi dan listrik.",
+      "Kawasan pemukiman super padat & mandiri di Taman Harapan Baru (THB), Pejuang, Medan Satria — nempel dengan mega-kawasan Harapan Indah. Target utama pekerja pabrik/industri (Kawasan Industri Medan Satria/Pondok Ungu 5–8 menit), karyawan mal (Living Plaza, Naga Swalayan), dan komuter Jakarta. Dekat Halte TransJakarta Harapan Indah, Stasiun Kranji/Bekasi, dan Gerbang Tol Bekasi Barat. Juga dekat Universitas Esa Unggul, Binus, BSI Kaliabang.",
     keywords: [
       "kost bekasi",
       "kost muslimah bekasi",
@@ -52,6 +52,12 @@ export const CITIES: CityData[] = [
       "kost baitul utrujjah bekasi",
       "kost taman harapan baru",
       "kost medan satria",
+      "kost pejuang bekasi",
+      "kost karyawan bekasi",
+      "kost dekat harapan indah",
+      "kost dekat pondok ungu",
+      "kost dekat esa unggul bekasi",
+      "kost dekat stasiun kranji",
     ],
     heroSubtitle: "Kost Muslimah di Bekasi",
     price: 500000,
