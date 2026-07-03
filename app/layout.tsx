@@ -51,12 +51,23 @@ export const metadata: Metadata = {
     description:
       "Kost Muslimah Baitul Utrujjah, hunian kos aman dan nyaman untuk muslimah. Tersedia 3 cabang: Bekasi, Jogja, Semarang.",
     url: SITE_URL,
+    images: [
+      {
+        url: "https://placehold.co/1200x630/8FA87A/FFFFFF/png?text=Baitul+Utrujjah&font=playfair-display",
+        width: 1200,
+        height: 630,
+        alt: "Kost Muslimah Baitul Utrujjah",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kost Muslimah Baitul Utrujjah",
     description:
       "Hunian kos islami nyaman untuk muslimah. Cabang Bekasi, Jogja, Semarang.",
+    images: [
+      "https://placehold.co/1200x630/8FA87A/FFFFFF/png?text=Baitul+Utrujjah&font=playfair-display",
+    ],
   },
   robots: {
     index: true,

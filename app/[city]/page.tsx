@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteName = "Kost Muslimah Baitul Utrujjah";
   const title = `Kost Muslimah Baitul Utrujjah ${data.name} | ${data.address}`;
   const description = `Kost Muslimah Baitul Utrujjah cabang ${data.name}. ${data.description} Harga mulai Rp ${data.price.toLocaleString("id-ID")}/bulan. WA ${data.name}: ${SITE_URL}/${data.slug}`;
-  const ogImage = data.gallery[0]?.src;
+  const ogImage = data.gallery[0]?.src?.replace("?text", "/png?text");
 
   return {
     title,
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: "id_ID",
       type: "website",
       images: ogImage
-        ? [{ url: ogImage, width: 800, height: 600, alt: `Kost Muslimah Baitul Utrujjah ${data.name}` }]
+        ? [{ url: ogImage, width: 1200, height: 630, alt: `Kost Muslimah Baitul Utrujjah ${data.name}` }]
         : [],
     },
     twitter: {
