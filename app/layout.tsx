@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Kost Muslimah Baitul Utrujjah",
   },
   description:
-    "Kost Muslimah Baitul Utrujjah, hunian kos nyaman dan islami untuk muslimah. Tersedia 3 cabang: Bekasi, Jogja, Semarang. Harga mulai Rp 500.000.",
+    "Kost Muslimah Baitul Utrujjah, kos khusus muslimah. Tersedia 3 cabang: Bekasi, Jogja, Semarang.",
   keywords: [
     "kost muslimah",
     "kost putri",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Kost Muslimah Baitul Utrujjah",
     title: "Kost Muslimah Baitul Utrujjah | Hunian Islami Nyaman",
     description:
-      "Kost Muslimah Baitul Utrujjah, hunian kos nyaman dan islami untuk muslimah. Tersedia 3 cabang: Bekasi, Jogja, Semarang.",
+      "Kost Muslimah Baitul Utrujjah, kos khusus muslimah. Tersedia 3 cabang: Bekasi, Jogja, Semarang.",
     url: SITE_URL,
     images: [
       {
