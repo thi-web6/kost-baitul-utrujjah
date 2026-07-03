@@ -2,12 +2,7 @@
 
 import { motion } from "motion/react";
 import { useState } from "react";
-
-const phoneNumber = "6281234567890";
-const message = encodeURIComponent(
-  "Assalamu'alaikum Kak, saya ingin bertanya tentang Kost Muslimah Baitul Utrujjah."
-);
-const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+import { WA_URL } from "@/lib/data";
 
 export default function WaButton() {
   const [hover, setHover] = useState(false);
@@ -28,7 +23,7 @@ export default function WaButton() {
       </motion.div>
 
       <motion.a
-        href={waUrl}
+        href={WA_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="relative flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition-shadow hover:shadow-xl"

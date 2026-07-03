@@ -4,39 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
 import Image from "next/image";
-
-const galleryImages = [
-  {
-    src: "https://placehold.co/800x600/FFF8F0/8FA87A?text=Tampak+Depan&font=playfair-display",
-    alt: "Tampak depan Kost Baitul Utrujjah",
-    label: "Tampak Depan",
-  },
-  {
-    src: "https://placehold.co/800x600/F5D6D0/6B805A?text=Kamar+AC&font=playfair-display",
-    alt: "Kamar AC",
-    label: "Kamar AC",
-  },
-  {
-    src: "https://placehold.co/800x600/FEFCF8/8FA87A?text=Ruang+Bersama&font=playfair-display",
-    alt: "Ruang bersama",
-    label: "Ruang Bersama",
-  },
-  {
-    src: "https://placehold.co/800x600/FDE8E3/6B805A?text=Kamar+Non-AC&font=playfair-display",
-    alt: "Kamar Non-AC",
-    label: "Kamar Non-AC",
-  },
-  {
-    src: "https://placehold.co/800x600/FFF8F0/8FA87A?text=Dapur+Umum&font=playfair-display",
-    alt: "Dapur umum",
-    label: "Dapur Umum",
-  },
-  {
-    src: "https://placehold.co/800x600/F5D6D0/6B805A?text=Tempat+Wudhu&font=playfair-display",
-    alt: "Tempat wudhu",
-    label: "Tempat Wudhu",
-  },
-];
+import type { CityData } from "@/lib/data";
 
 const containerVariants = {
   hidden: {},
@@ -54,7 +22,7 @@ const itemVariants = {
   },
 };
 
-export default function Gallery() {
+export default function CityGallery({ city }: { city: CityData }) {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
@@ -68,13 +36,13 @@ export default function Gallery() {
           className="mb-14 text-center"
         >
           <span className="mb-4 inline-block rounded-full bg-sage/10 px-4 py-1.5 text-sm font-medium text-sage-dark">
-            Galeri Foto
+            Galeri Foto {city.name}
           </span>
           <h2 className="font-heading text-3xl font-bold tracking-tight md:text-4xl">
-            Gallery
+            Gallery {city.name}
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-            Lihat suasana dan fasilitas kost kami melalui foto-foto berikut.
+            Lihat suasana dan fasilitas kost {city.name} melalui foto-foto berikut.
           </p>
         </motion.div>
 
@@ -85,7 +53,7 @@ export default function Gallery() {
           viewport={{ once: true, margin: "-50px" }}
           className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {galleryImages.map((img, i) => (
+          {city.gallery.map((img, i) => (
             <motion.div
               key={i}
               variants={itemVariants}
@@ -135,15 +103,15 @@ export default function Gallery() {
                 <X className="h-4 w-4" />
               </button>
               <Image
-                src={galleryImages[selected].src}
-                alt={galleryImages[selected].alt}
+                src={city.gallery[selected].src}
+                alt={city.gallery[selected].alt}
                 width={800}
                 height={600}
                 className="h-auto w-full object-contain"
               />
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                 <p className="text-sm font-medium text-white">
-                  {galleryImages[selected].label}
+                  {city.gallery[selected].label}
                 </p>
               </div>
             </motion.div>

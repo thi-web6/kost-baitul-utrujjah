@@ -1,26 +1,11 @@
 import { MoonStar, MapPin, Phone, Mail } from "lucide-react";
-
-const branches = [
-  {
-    city: "Bekasi",
-    address: "Taman Harapan Baru, Medan Satria, Bekasi",
-  },
-  {
-    city: "Yogyakarta",
-    address: "Jl. Popongan 3, Sinduadi, Mlati, Sleman",
-  },
-  {
-    city: "Semarang",
-    address: "Perum Griya Borobudur Meteseh Blok F",
-  },
-];
+import { CITIES, PHONE_DISPLAY } from "@/lib/data";
 
 const quickLinks = [
-  { label: "Beranda", href: "#beranda" },
-  { label: "Lokasi", href: "#lokasi" },
-
-  { label: "Gallery", href: "#gallery" },
-  { label: "Harga", href: "#harga" },
+  { label: "Beranda", href: "/" },
+  { label: "Bekasi", href: "/kost-bekasi" },
+  { label: "Yogyakarta", href: "/kost-jogja" },
+  { label: "Semarang", href: "/kost-semarang" },
 ];
 
 export default function Footer() {
@@ -44,7 +29,7 @@ export default function Footer() {
 
             <div>
               <h3 className="mb-4 font-heading text-base font-semibold">
-                Tautan Cepat
+                Tersedia di
               </h3>
               <ul className="space-y-2.5">
                 {quickLinks.map((link) => (
@@ -65,26 +50,26 @@ export default function Footer() {
                 Kontak & Lokasi
               </h3>
               <div className="space-y-4 text-sm text-warm-white/70">
-                {branches.map((branch) => (
-                  <div key={branch.city} className="flex items-start gap-2">
+                {CITIES.map((city) => (
+                  <div key={city.slug} className="flex items-start gap-2">
                     <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-soft-pink-light" />
                     <span>
                       <strong className="text-warm-white/90">
-                        {branch.city}
+                        {city.name}
                       </strong>
-                      : {branch.address}
+                      : {city.address}
                     </span>
                   </div>
                 ))}
                 <div className="flex items-center gap-2 pt-2">
                   <Phone className="h-4 w-4 shrink-0 text-soft-pink-light" />
                   <a
-                    href="https://wa.me/6281234567890"
+                    href={`https://wa.me/${PHONE_DISPLAY.replace(/[^0-9]/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="transition-colors hover:text-warm-white"
                   >
-                    0812-3456-7890
+                    {PHONE_DISPLAY}
                   </a>
                 </div>
                 <div className="flex items-center gap-2">

@@ -1,16 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Menu, MoonStar } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
-  { label: "Beranda", href: "#beranda" },
-  { label: "Lokasi", href: "#lokasi" },
-
-  { label: "Gallery", href: "#gallery" },
-  { label: "Harga", href: "#harga" },
-  { label: "Kontak", href: "#kontak" },
+  { label: "Beranda", href: "/" },
+  { label: "Bekasi", href: "/kost-bekasi" },
+  { label: "Jogja", href: "/kost-jogja" },
+  { label: "Semarang", href: "/kost-semarang" },
+  { label: "Kontak", href: "/#kontak" },
 ];
 
 export default function Navbar() {
@@ -31,7 +31,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <a href="#beranda" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <MoonStar className="h-5 w-5 text-sage" />
           <span
             className={`font-heading text-lg font-semibold tracking-tight ${
@@ -40,12 +40,12 @@ export default function Navbar() {
           >
             Baitul Utrujjah
           </span>
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-colors hover:bg-sage/10 ${
                   scrolled
@@ -54,7 +54,7 @@ export default function Navbar() {
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -81,13 +81,13 @@ export default function Navbar() {
             <ul className="flex flex-col gap-2">
               {navLinks.map((link, i) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="block rounded-lg px-4 py-3 text-foreground/70 transition-colors hover:bg-sage/10 hover:text-sage-dark"
                     style={{ animationDelay: `${i * 50}ms` }}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
