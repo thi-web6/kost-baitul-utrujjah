@@ -60,7 +60,7 @@ export default function Navbar() {
         </ul>
 
         <Sheet>
-          <SheetTrigger className="flex md:hidden">
+          <SheetTrigger className="flex md:hidden" aria-label="Buka menu">
             <div
               className={`flex h-9 w-9 items-center justify-center rounded-lg transition-colors ${
                 scrolled
