@@ -22,10 +22,7 @@ export default function CityHarga({ city }: { city: CityData }) {
           <h2 className="font-heading text-3xl font-bold tracking-tight md:text-4xl">
             Harga {city.name}
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-            Harga sudah termasuk biaya listrik. Tanpa biaya tambahan yang
-            membingungkan.
-          </p>
+
         </motion.div>
 
         <motion.div
