@@ -10,7 +10,6 @@ export default function CityJsonLd({ city }: { city: CityData }) {
     description: city.description,
     url: `${SITE_URL}/${city.slug}`,
     telephone: `+${PHONE}`,
-    email: "info@baitulutrujjah.com",
     image: city.gallery[0]?.src,
     priceRange: `Rp ${city.price.toLocaleString("id-ID")}`,
     parentOrganization: {

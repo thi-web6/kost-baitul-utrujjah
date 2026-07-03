@@ -9,7 +9,6 @@ export default function JsonLd() {
     url: SITE_URL,
     logo: `${SITE_URL}/favicon.ico`,
     telephone: `+${PHONE}`,
-    email: "info@baitulutrujjah.com",
     description:
       "Kost Muslimah dengan 3 cabang di Bekasi, Yogyakarta, dan Semarang.",
     aggregateRating: {
