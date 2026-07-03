@@ -24,9 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteName = "Kost Muslimah Baitul Utrujjah";
   const title = `Kost Muslimah Baitul Utrujjah ${data.name} | ${data.address}`;
   const description = `Kost Muslimah Baitul Utrujjah cabang ${data.name}. ${data.description} Harga mulai Rp ${data.price.toLocaleString("id-ID")}/bulan. WA ${data.name}: ${SITE_URL}/${data.slug}`;
-  const ogImage = data.gallery[0]?.src
-    ?.replace("800x600", "1200x630")
-    ?.replace("?text", ".png?text");
+  const slugKey = data.slug.replace("kost-", "");
+  const ogImage = `${SITE_URL}/og/${slugKey}.png`;
 
   return {
     title,
@@ -40,15 +39,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName,
       locale: "id_ID",
       type: "website",
-      images: ogImage
-        ? [{ url: ogImage, width: 1200, height: 630, alt: `Kost Muslimah Baitul Utrujjah ${data.name}` }]
-        : [],
+      images: [
+        { url: ogImage, width: 1200, height: 630, alt: `Kost Muslimah Baitul Utrujjah ${data.name}` },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${siteName} ${data.name}`,
       description,
-      images: ogImage ? [ogImage] : [],
+      images: [ogImage],
     },
     robots: {
       index: true,
