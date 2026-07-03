@@ -1,11 +1,9 @@
 import type { MetadataRoute } from "next";
-import { CITIES } from "@/lib/data";
-
-const baseUrl = "https://kost-baitul-utrujjah.vercel.app";
+import { CITIES, SITE_URL } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const cityPages = CITIES.map((city) => ({
-    url: `${baseUrl}/${city.slug}`,
+    url: `${SITE_URL}/${city.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.9,
@@ -13,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: baseUrl,
+      url: SITE_URL,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,

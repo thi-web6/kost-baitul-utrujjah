@@ -1,3 +1,5 @@
+export const SITE_URL = "https://kost-baitul-utrujjah.vercel.app";
+
 export const PHONE = "6285813428529";
 export const PHONE_DISPLAY = "0858-1342-8529";
 
@@ -19,7 +21,9 @@ export interface CityData {
   address: string;
   mapEmbedUrl: string;
   mapsLink: string;
+  geo: { lat: number; lng: number };
   description: string;
+  keywords: string[];
   heroSubtitle: string;
   price: number;
   priceLabel: string;
@@ -38,8 +42,17 @@ export const CITIES: CityData[] = [
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3807875298514!2d106.9914613!3d-6.1752919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f348899172f%3A0xc0eea761c8dce842!2sLBQ%20Ibadurrohman!5e0!3m2!1sid!2sid!4v1",
     mapsLink:
       "https://www.google.com/maps/place/LBQ+Ibadurrohman/@-6.1752919,106.99365,17z/data=!3m1!4b1!4m6!3m5!1s0x2e698f348899172f:0xc0eea761c8dce842!8m2!3d-6.1752919!4d106.99365!16s%2Fg%2F11zj4ltvcp!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    geo: { lat: -6.1752919, lng: 106.99365 },
     description:
-      "Lingkungan asri di Taman Harapan Baru, dekat dengan pusat perbelanjaan, kampus, dan akses tol. Nyaman untuk aktivitas sehari-hari.",
+      "Lingkungan asri di Taman Harapan Baru Blok E1, dekat pusat perbelanjaan, kampus, dan akses tol. Kost muslimah nyaman dengan free WiFi dan listrik.",
+    keywords: [
+      "kost bekasi",
+      "kost muslimah bekasi",
+      "kost putri bekasi",
+      "kost baitul utrujjah bekasi",
+      "kost taman harapan baru",
+      "kost medan satria",
+    ],
     heroSubtitle: "Kost Muslimah di Bekasi",
     price: 500000,
     priceLabel: "/bulan",
@@ -93,8 +106,18 @@ export const CITIES: CityData[] = [
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.135711804944!2d110.3645205!3d-7.7604138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a585a0751f857%3A0x20faad24a43247a2!2sBaitull%20Utrujjah!5e0!3m2!1sid!2sid!4v1",
     mapsLink:
       "https://www.google.com/maps/place/Baitull+Utrujjah/@-7.7604138,110.3667093,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7a585a0751f857:0x20faad24a43247a2!8m2!3d-7.7604138!4d110.3667093!16s%2Fg%2F11f54zmtl_?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
+    geo: { lat: -7.7604138, lng: 110.3667093 },
     description:
       "Lokasi strategis di Pogung Baru — berbatasan langsung dengan area utara UGM (Fakultas Teknik, MIPA, Kedokteran 3–5 menit). Dekat UNY, RSUP Sardjito, RSGM Prof. Soedomo, Jalan Kaliurang, Jogja City Mall, dan pusat kuliner Monjali.",
+    keywords: [
+      "kost jogja",
+      "kost muslimah jogja",
+      "kost putri jogja",
+      "kost baitul utrujjah jogja",
+      "kost pogung baru",
+      "kost dekat ugm",
+      "kost dekat uny",
+    ],
     heroSubtitle: "Kost Muslimah di Yogyakarta",
     price: 500000,
     priceLabel: "/bulan",
@@ -150,8 +173,17 @@ export const CITIES: CityData[] = [
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.123456789!2d110.408045!3d-7.005145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x56d94805257069ad!2sKost%20Muslimah%20Murah%2C%20Semarang!5e0!3m2!1sid!2sid!4v1",
     mapsLink:
       "https://www.google.com/maps/place/Kost+Muslimah+Murah,+Semarang/data=!4m2!3m1!1s0x0:0x56d94805257069ad?sa=X&ved=1t:2428&ictx=111",
+    geo: { lat: -7.005145, lng: 110.408045 },
     description:
       "Kawasan perumahan yang tenang di Meteseh, dekat dengan kampus dan pusat bisnis Semarang. Lingkungan Islami yang nyaman.",
+    keywords: [
+      "kost semarang",
+      "kost muslimah semarang",
+      "kost putri semarang",
+      "kost baitul utrujjah semarang",
+      "kost meteseh",
+      "kost griya borobudur",
+    ],
     heroSubtitle: "Kost Muslimah di Semarang",
     price: 500000,
     priceLabel: "/bulan",

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getCityBySlug, CITIES } from "@/lib/data";
+import { getCityBySlug, CITIES, SITE_URL } from "@/lib/data";
 import CityHero from "@/components/city-hero";
 import CityGallery from "@/components/city-gallery";
 import CityHarga from "@/components/city-harga";
@@ -20,24 +20,43 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = getCityBySlug(city);
   if (!data) return {};
 
-  const title = `Kost Muslimah Baitul Utrujjah ${data.name} | Hunian Islami Nyaman`;
-  const description = `Kost Muslimah Baitul Utrujjah cabang ${data.name} — ${data.address}. ${data.description} Harga mulai Rp ${data.price.toLocaleString("id-ID")}/bulan.`;
+  const canonical = `${SITE_URL}/${data.slug}`;
+  const siteName = "Kost Muslimah Baitul Utrujjah";
+  const title = `Kost Muslimah Baitul Utrujjah ${data.name} | ${data.address}`;
+  const description = `Kost Muslimah Baitul Utrujjah cabang ${data.name} — ${data.description} Harga mulai Rp ${data.price.toLocaleString("id-ID")}/bulan. WA ${data.name}: ${SITE_URL}/${data.slug}`;
+  const ogImage = data.gallery[0]?.src;
 
   return {
     title,
     description,
-    alternates: { canonical: `https://kost-baitul-utrujjah.vercel.app/${data.slug}` },
+    keywords: data.keywords,
+    alternates: { canonical },
     openGraph: {
-      title: `Kost Muslimah Baitul Utrujjah ${data.name}`,
+      title: `${siteName} ${data.name}`,
       description,
-      url: `https://kost-baitul-utrujjah.vercel.app/${data.slug}`,
+      url: canonical,
+      siteName,
       locale: "id_ID",
-      siteName: "Kost Muslimah Baitul Utrujjah",
+      type: "website",
+      images: ogImage
+        ? [{ url: ogImage, width: 800, height: 600, alt: `Kost Muslimah Baitul Utrujjah ${data.name}` }]
+        : [],
     },
     twitter: {
       card: "summary_large_image",
-      title: `Kost Muslimah Baitul Utrujjah ${data.name}`,
+      title: `${siteName} ${data.name}`,
       description,
+      images: ogImage ? [ogImage] : [],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+      },
     },
   };
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "@/lib/data";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import WaButton from "@/components/wa-button";
@@ -22,13 +23,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kost-baitul-utrujjah.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Kost Muslimah Baitul Utrujjah | Hunian Islami Nyaman",
     template: "%s | Kost Muslimah Baitul Utrujjah",
   },
   description:
-    "Kost Muslimah Baitul Utrujjah — hunian kos aman, nyaman, dan islami untuk muslimah. Tersedia 3 cabang: Bekasi, Jogja, Semarang. Harga mulai Rp 500.000 include listrik.",
+    "Kost Muslimah Baitul Utrujjah — hunian kos aman, nyaman, dan islami untuk muslimah. Tersedia 3 cabang: Bekasi, Jogja, Semarang. Harga mulai Rp 500.000.",
   keywords: [
     "kost muslimah",
     "kost putri",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     title: "Kost Muslimah Baitul Utrujjah | Hunian Islami Nyaman",
     description:
       "Kost Muslimah Baitul Utrujjah — hunian kos aman, nyaman, dan islami untuk muslimah. Tersedia 3 cabang: Bekasi, Jogja, Semarang.",
-    url: "https://kost-baitul-utrujjah.vercel.app",
+    url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",

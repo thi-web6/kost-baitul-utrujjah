@@ -1,12 +1,13 @@
-import { PHONE } from "@/lib/data";
+import { SITE_URL, PHONE } from "@/lib/data";
 
 export default function JsonLd() {
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
     name: "Kost Muslimah Baitul Utrujjah",
-    url: "https://kost-baitul-utrujjah.vercel.app",
-    logo: "https://placehold.co/800x600/FFF8F0/8FA87A?text=Baitul+Utrujjah",
+    url: SITE_URL,
+    logo: `${SITE_URL}/favicon.ico`,
     telephone: `+${PHONE}`,
     email: "info@baitulutrujjah.com",
     description:
@@ -22,8 +23,10 @@ export default function JsonLd() {
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: "Kost Muslimah Baitul Utrujjah",
-    url: "https://kost-baitul-utrujjah.vercel.app",
+    url: SITE_URL,
+    inLanguage: "id",
   };
 
   return (
