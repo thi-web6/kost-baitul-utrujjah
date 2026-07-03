@@ -94,7 +94,7 @@ export const CITIES: CityData[] = [
     mapsLink:
       "https://www.google.com/maps/place/Baitull+Utrujjah/@-7.7604138,110.3667093,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7a585a0751f857:0x20faad24a43247a2!8m2!3d-7.7604138!4d110.3667093!16s%2Fg%2F11f54zmtl_?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
     description:
-      "Dekat dengan kawasan UGM, UNY, dan pusat kota Jogja. Suasana tenang dan nyaman untuk kost muslimah.",
+      "Lokasi strategis di Pogung Baru — berbatasan langsung dengan area utara UGM (Fakultas Teknik, MIPA, Kedokteran 3–5 menit). Dekat UNY, RSUP Sardjito, RSGM Prof. Soedomo, Jalan Kaliurang, Jogja City Mall, dan pusat kuliner Monjali.",
     heroSubtitle: "Kost Muslimah di Yogyakarta",
     price: 500000,
     priceLabel: "/bulan",
