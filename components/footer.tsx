@@ -22,7 +22,7 @@ export default function Footer() {
                 </span>
               </div>
               <p className="text-sm leading-relaxed text-warm-white/70">
-                Kost muslimah yang nyaman, aman, dan islami. Tersedia di
+                Kost muslimah yang nyaman dan islami. Tersedia di
                 Bekasi, Jogja, dan Semarang.
               </p>
             </div>
