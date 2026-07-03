@@ -44,7 +44,7 @@ export const CITIES: CityData[] = [
       "https://www.google.com/maps/place/LBQ+Ibadurrohman/@-6.1752919,106.99365,17z/data=!3m1!4b1!4m6!3m5!1s0x2e698f348899172f:0xc0eea761c8dce842!8m2!3d-6.1752919!4d106.99365!16s%2Fg%2F11zj4ltvcp!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
     geo: { lat: -6.1752919, lng: 106.99365 },
     description:
-      "Berada di Taman Harapan Baru (THB), Pejuang, Medan Satria — perumahan yang rame dan strategis, persis di samping kawasan Harapan Indah. Banyak dicari pekerja pabrik (Kawasan Industri Pondok Ungu cuma 5–8 menit), karyawan mal, dan komuter Jakarta. Deket Halte TransJakarta, Stasiun Kranji, dan pintu tol. Juga deket kampus Esa Unggul, Binus, dan BSI.",
+      "Berada di Taman Harapan Baru (THB), Pejuang, Medan Satria. Perumahan yang rame dan strategis, persis di samping kawasan Harapan Indah. Banyak dicari pekerja pabrik (Kawasan Industri Pondok Ungu cuma 5–8 menit), karyawan mal, dan komuter Jakarta. Deket Halte TransJakarta, Stasiun Kranji, dan pintu tol. Juga deket kampus Esa Unggul, Binus, dan BSI.",
     keywords: [
       "kost bekasi",
       "kost muslimah bekasi",
@@ -114,7 +114,7 @@ export const CITIES: CityData[] = [
       "https://www.google.com/maps/place/Baitull+Utrujjah/@-7.7604138,110.3667093,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7a585a0751f857:0x20faad24a43247a2!8m2!3d-7.7604138!4d110.3667093!16s%2Fg%2F11f54zmtl_?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D",
     geo: { lat: -7.7604138, lng: 110.3667093 },
     description:
-      "Ada di Pogung Baru — daerah paling strategis buat mahasiswa UGM. Fakultas Teknik, MIPA, sama Kedokteran cuma 3–5 menit. Sekitar sini juga deket UNY, RSUP Sardjito, RSGM, JCM, Jalan Kaliurang, dan kuliner Monjali.",
+      "Ada di Pogung Baru, daerah paling strategis buat mahasiswa UGM. Fakultas Teknik, MIPA, sama Kedokteran cuma 3–5 menit. Sekitar sini juga deket UNY, RSUP Sardjito, RSGM, JCM, Jalan Kaliurang, dan kuliner Monjali.",
     keywords: [
       "kost jogja",
       "kost muslimah jogja",
@@ -181,7 +181,7 @@ export const CITIES: CityData[] = [
       "https://maps.google.com/maps?q=Mangunharjo+Tembalang+Semarang",
     geo: { lat: -7.0428004, lng: 110.4585499 },
     description:
-      "Di Mangunharjo, Tembalang — kawasan yang lagi berkembang pesat di Semarang. Banyak dipilih mahasiswa Undip, Polines, Unimus, dan Stikes karena lebih hemat dan suasananya adem. Deket RSUD Ketileng, RSND, Pasar Sendangmulyo, Superindo Klipang, dan kuliner Elang. Akses ke Tol Tembalang juga gampang.",
+      "Di Mangunharjo, Tembalang, kawasan yang lagi berkembang pesat di Semarang. Banyak dipilih mahasiswa Undip, Polines, Unimus, dan Stikes karena lebih hemat dan suasananya adem. Deket RSUD Ketileng, RSND, Pasar Sendangmulyo, Superindo Klipang, dan kuliner Elang. Akses ke Tol Tembalang juga gampang.",
     keywords: [
       "kost semarang",
       "kost muslimah semarang",

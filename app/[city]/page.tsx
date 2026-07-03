@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `${SITE_URL}/${data.slug}`;
   const siteName = "Kost Muslimah Baitul Utrujjah";
   const title = `Kost Muslimah Baitul Utrujjah ${data.name} | ${data.address}`;
-  const description = `Kost Muslimah Baitul Utrujjah cabang ${data.name} — ${data.description} Harga mulai Rp ${data.price.toLocaleString("id-ID")}/bulan. WA ${data.name}: ${SITE_URL}/${data.slug}`;
+  const description = `Kost Muslimah Baitul Utrujjah cabang ${data.name}. ${data.description} Harga mulai Rp ${data.price.toLocaleString("id-ID")}/bulan. WA ${data.name}: ${SITE_URL}/${data.slug}`;
   const ogImage = data.gallery[0]?.src;
 
   return {

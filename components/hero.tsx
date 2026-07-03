@@ -43,7 +43,7 @@ export default function Hero() {
           className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-white/80 md:text-xl"
         >
           Cari kost muslimah yang nyaman dan aman? Baitul Utrujjah ada di
-          Bekasi, Jogja, dan Semarang — siap jadi rumah kedua buat kamu.
+          Bekasi, Jogja, dan Semarang, siap jadi rumah kedua buat kamu.
         </motion.p>
 
         <motion.div
