@@ -58,9 +58,9 @@ export const CITIES: CityData[] = [
         label: "Tampak Depan",
       },
       {
-        src: "https://placehold.co/800x600/F5D6D0/6B805A?text=Bekasi+Kamar+AC&font=playfair-display",
-        alt: "Kamar AC Bekasi",
-        label: "Kamar AC",
+        src: "https://placehold.co/800x600/F5D6D0/6B805A?text=Bekasi+Kamar+Tidur&font=playfair-display",
+        alt: "Kamar tidur Bekasi",
+        label: "Kamar Tidur",
       },
       {
         src: "https://placehold.co/800x600/FEFCF8/8FA87A?text=Bekasi+Ruang+Bersama&font=playfair-display",
@@ -68,9 +68,9 @@ export const CITIES: CityData[] = [
         label: "Ruang Bersama",
       },
       {
-        src: "https://placehold.co/800x600/FDE8E3/6B805A?text=Bekasi+Kamar+Non-AC&font=playfair-display",
-        alt: "Kamar Non-AC Bekasi",
-        label: "Kamar Non-AC",
+        src: "https://placehold.co/800x600/FDE8E3/6B805A?text=Bekasi+Interior&font=playfair-display",
+        alt: "Interior kamar Bekasi",
+        label: "Interior",
       },
       {
         src: "https://placehold.co/800x600/FFF8F0/8FA87A?text=Bekasi+Dapur&font=playfair-display",
@@ -115,9 +115,9 @@ export const CITIES: CityData[] = [
         label: "Tampak Depan",
       },
       {
-        src: "https://placehold.co/800x600/FDE8E3/6B805A?text=Jogja+Kamar+AC&font=playfair-display",
-        alt: "Kamar AC Yogyakarta",
-        label: "Kamar AC",
+        src: "https://placehold.co/800x600/FDE8E3/6B805A?text=Jogja+Kamar+Tidur&font=playfair-display",
+        alt: "Kamar tidur Yogyakarta",
+        label: "Kamar Tidur",
       },
       {
         src: "https://placehold.co/800x600/FFF8F0/8FA87A?text=Jogja+Ruang+Bersama&font=playfair-display",
@@ -125,9 +125,9 @@ export const CITIES: CityData[] = [
         label: "Ruang Bersama",
       },
       {
-        src: "https://placehold.co/800x600/F5D6D0/6B805A?text=Jogja+Kamar+Non-AC&font=playfair-display",
-        alt: "Kamar Non-AC Yogyakarta",
-        label: "Kamar Non-AC",
+        src: "https://placehold.co/800x600/F5D6D0/6B805A?text=Jogja+Interior&font=playfair-display",
+        alt: "Interior kamar Yogyakarta",
+        label: "Interior",
       },
       {
         src: "https://placehold.co/800x600/FEFCF8/8FA87A?text=Jogja+Dapur&font=playfair-display",
@@ -169,9 +169,9 @@ export const CITIES: CityData[] = [
         label: "Tampak Depan",
       },
       {
-        src: "https://placehold.co/800x600/FFF8F0/6B805A?text=Semarang+Kamar+AC&font=playfair-display",
-        alt: "Kamar AC Semarang",
-        label: "Kamar AC",
+        src: "https://placehold.co/800x600/FFF8F0/6B805A?text=Semarang+Kamar+Tidur&font=playfair-display",
+        alt: "Kamar tidur Semarang",
+        label: "Kamar Tidur",
       },
       {
         src: "https://placehold.co/800x600/FDE8E3/8FA87A?text=Semarang+Ruang+Bersama&font=playfair-display",
@@ -179,9 +179,9 @@ export const CITIES: CityData[] = [
         label: "Ruang Bersama",
       },
       {
-        src: "https://placehold.co/800x600/FEFCF8/6B805A?text=Semarang+Kamar+Non-AC&font=playfair-display",
-        alt: "Kamar Non-AC Semarang",
-        label: "Kamar Non-AC",
+        src: "https://placehold.co/800x600/FEFCF8/6B805A?text=Semarang+Interior&font=playfair-display",
+        alt: "Interior kamar Semarang",
+        label: "Interior",
       },
       {
         src: "https://placehold.co/800x600/F5D6D0/8FA87A?text=Semarang+Dapur&font=playfair-display",
