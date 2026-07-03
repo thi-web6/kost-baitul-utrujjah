@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     images: [
       {
-        url: "https://placehold.co/1200x630/8FA87A/FFFFFF/png?text=Baitul+Utrujjah&font=playfair-display",
+        url: "https://placehold.co/1200x630/8FA87A/FFFFFF.png?text=Baitul+Utrujjah&font=playfair-display",
         width: 1200,
         height: 630,
         alt: "Kost Muslimah Baitul Utrujjah",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     description:
       "Hunian kos islami nyaman untuk muslimah. Cabang Bekasi, Jogja, Semarang.",
     images: [
-      "https://placehold.co/1200x630/8FA87A/FFFFFF/png?text=Baitul+Utrujjah&font=playfair-display",
+      "https://placehold.co/1200x630/8FA87A/FFFFFF.png?text=Baitul+Utrujjah&font=playfair-display",
     ],
   },
   robots: {
