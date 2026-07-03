@@ -22,8 +22,8 @@ export default function Footer() {
                 </span>
               </div>
               <p className="text-sm leading-relaxed text-warm-white/70">
-                Kost Muslimah yang menyediakan hunian nyaman, aman, dan islami
-                untuk muslimah. Tersedia di 3 kota strategis.
+                Kost muslimah yang nyaman, aman, dan islami. Tersedia di
+                Bekasi, Jogja, dan Semarang.
               </p>
             </div>
 

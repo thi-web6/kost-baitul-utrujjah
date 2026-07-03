@@ -42,8 +42,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-warm-white/80 md:text-xl"
         >
-          Hunian nyaman, aman, dan islami untuk muslimah. Tersedia di 3 kota
-          strategis.
+          Cari kost muslimah yang nyaman dan aman? Baitul Utrujjah ada di
+          Bekasi, Jogja, dan Semarang — siap jadi rumah kedua buat kamu.
         </motion.p>
 
         <motion.div
