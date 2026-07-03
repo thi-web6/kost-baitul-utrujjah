@@ -1,4 +1,4 @@
-import { MoonStar, MapPin, Phone, Mail } from "lucide-react";
+import { MoonStar, MapPin, Phone } from "lucide-react";
 import { CITIES, PHONE_DISPLAY } from "@/lib/data";
 
 const quickLinks = [
@@ -70,15 +70,6 @@ export default function Footer() {
                     className="transition-colors hover:text-warm-white"
                   >
                     {PHONE_DISPLAY}
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4 shrink-0 text-soft-pink-light" />
-                  <a
-                    href="mailto:info@baitulutrujjah.com"
-                    className="transition-colors hover:text-warm-white"
-                  >
-                    info@baitulutrujjah.com
                   </a>
                 </div>
               </div>
